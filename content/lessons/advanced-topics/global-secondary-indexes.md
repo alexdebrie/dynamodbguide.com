@@ -31,7 +31,7 @@ The last two points can be confusing. The first refers to the primary key schema
 
 Like local secondary indexes, you may specify a global secondary index when you initially create a table. However, you may also add a global secondary index after a table is already created. DynamoDB will backfill the global secondary index based on the existing data in the table.
 
-In this example, let's use show how we might use a _sparse index_ for our global secondary index. A sparse index is when not every Item contains the attribute you're indexing. Only Items with the attribute(s) matching the key schema for your index will be copied into the index, so you may end up with fewer Items in the index than in the underlying table.
+In this example, let's show how we might use a _sparse index_ for our global secondary index. A sparse index is when not every Item contains the attribute you're indexing. Only Items with the attribute(s) matching the key schema for your index will be copied into the index, so you may end up with fewer Items in the index than in the underlying table.
 
 Imagine we want to keep track of Orders that were returned by our Users. We'll store the date of the return in a ReturnDate attribute. We'll also add a global secondary index with a composite key schema using ReturnDate as the HASH key and OrderId as the RANGE key.
 

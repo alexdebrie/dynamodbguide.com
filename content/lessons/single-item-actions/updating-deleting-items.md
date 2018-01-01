@@ -11,17 +11,17 @@ In this lesson, we'll learn about updating and deleting Items. This is the final
 
 ## Updating Items
 
-Previously, we use the [PutItem operation](./inserting-retrieving-items#put-item) to insert Items into our DynamoDB table. We saw that this operation completely overwrites any existing Item in the table. To counteract this, we used a [condition expression](./expression-basics#condition-expressions) to only insert the Item if an Item with that primary key did not exist previously.
+Previously, we used the [PutItem operation](./inserting-retrieving-items#put-item) to insert Items into our DynamoDB table. We saw that this operation completely overwrites any existing Item in the table. To counteract this, we used a [condition expression](./expression-basics#condition-expressions) to only insert the Item if an Item with that primary key did not exist previously.
 
 At other times, it is useful to _update_ an existing Item by modifying one or two attributes but leaving the other attributes unchanged. DynamoDB has an UpdateItem operation which allows you to update an Item directly without first retrieving the Item, manipulating it as desired, then saving it back with a PutItem operation.
 
-When using the UpdateItem action, you need to specify an **update expression**. This describes the update actions you want to take and uses the [expression syntax](./expression-basics). There are a few small aspects specific to the update expression syntax.
+When using the UpdateItem action, you need to specify an **update expression**. This describes the update actions you want to take and uses the [expression syntax](./expression-basics).
 
 When using the update expression, you must include one of four update clauses. These clauses are:
 
-- **SET:** Used to add an attribute to an Item or modifying an existing attribute;
+- **SET:** Used to add an attribute to an Item or modify an existing attribute;
 - **REMOVE:** Used to delete attributes from an Item.
-- **ADD:** Used to increment/decrement a [Number](./anatomy-of-an-item#number-type) or inserting elements into a [Set](./anatomy-of-an-item#string-set-type).
+- **ADD:** Used to increment/decrement a [Number](./anatomy-of-an-item#number-type) or insert elements into a [Set](./anatomy-of-an-item#string-set-type).
 - **DELETE:** Used to remove items from a [Set](./anatomy-of-an-item#string-set-type).
 
 Let's check a few of these by example.
@@ -30,7 +30,7 @@ Let's check a few of these by example.
 
 The most common update clause is "SET", which is used to add an attribute to an Item if the attribute does not exist or to overwrite the existing attribute value if it does exist.
 
-Returning to our initial PutItem examples, perhaps we want to have a DateOfBirth attribute for our Users. Without the UpdateItem action, we would need to retrieve the Item with a GetItem call and then reinserting the Item with a DateOfBirth attribute via a PutItem call. With the UpdateItem call, we can just insert the DateOfBirth directly:
+Returning to our initial PutItem examples, perhaps we want to have a DateOfBirth attribute for our Users. Without the UpdateItem action, we would need to retrieve the Item with a GetItem call and then reinsert the Item with a DateOfBirth attribute via a PutItem call. With the UpdateItem call, we can just insert the DateOfBirth directly:
 
 ```bash
 $ aws dynamodb update-item \

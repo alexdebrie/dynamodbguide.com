@@ -25,7 +25,7 @@ DynamoDB is a particularly good fit for the following use cases:
 
 Start with the [key concepts](./key-concepts) to learn about tables, items, and other basic elements of DynamoDB. If you want the computer science background on DynamoDB, check out the section on the [Dynamo Paper](./the-dynamo-paper). 
 
-If you want to get your hands dirty, [set up your environment](./environment-setup) then start with the section on the [working with single items](./anatomy-of-an-item). Then you can move on to [working with multiple items](./working-with-multiple-items) using Queries and Scans. 
+If you want to get your hands dirty, [set up your environment](./environment-setup) then start with the section on [working with single items](./anatomy-of-an-item). Then you can move on to [working with multiple items](./working-with-multiple-items) using Queries and Scans. 
 
 Want the advanced stuff? Power up your tables with [secondary indexes](./secondary-indexes) and [DynamoDB Streams](./dynamodb-streams).
 

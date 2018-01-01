@@ -23,7 +23,7 @@ A _table_ is a grouping of data records. For example, you might have a Users tab
 
 An _item_ is a single data record in a table. Each item in a table is uniquely identified by the stated [primary key](#primary-key) of the table. In your Users table, an item would be a particular User. An item is similar to a row in a relational database or a document in MongoDB.
 
-_Attributes_ are pieces of data attached to a single item. This could be an simple Age attribute that stores the age of a user. An attribute is comparable to a column in a relational database or a field in MongoDB. DynamoDB does not require attributes on items except for attributes that make up your [primary key](#primary-key).
+_Attributes_ are pieces of data attached to a single item. This could be a simple Age attribute that stores the age of a user. An attribute is comparable to a column in a relational database or a field in MongoDB. DynamoDB does not require attributes on items except for attributes that make up your [primary key](#primary-key).
 
 ### Primary Key
 
@@ -49,7 +49,7 @@ The first kind of secondary index is a **local secondary index**. A local second
 
 The second kind of secondary index is a **global secondary index**. A global secondary index can define an entirely different primary key for a table. This could mean setting an index with just a partition key for a table with a composite primary key. It could also mean using completely different attributes to populate a partition key and sort key. With the Order example above, we could have a global secondary index with a partition key of OrderId so we could retrieve a particular order without knowing the CustomerId that placed the order.
 
-Secondary indexes are a deep topic but are extremely useful in getting the most out of DynamoDB. Check out the section on [secondary indexes](./secondary-indexes) for a deeper dive.
+Secondary indexes are a complex topic but are extremely useful in getting the most out of DynamoDB. Check out the section on [secondary indexes](./secondary-indexes) for a deeper dive.
 
 # Read and Write Capacity
 

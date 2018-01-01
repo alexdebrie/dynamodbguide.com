@@ -19,7 +19,7 @@ Some additional notes about local secondary indexes:
 
 - **10GB limit per HASH key.** For a given HASH key, you may only store 10GB of data. This includes the size of the items in the base table _plus_ the combined size of the items in all local secondary indexes. This is a tricky one and is a good reason for being judicious with your [projected attributes](./secondary-indexes#projected-attributes).
 
-- **Consistency options.** For local secondary indexes, you may choose between strong consistency and eventually consistency, just like on the underlying table. Strong consistency will consume more read capacity but can be the right choice in some situations.
+- **Consistency options.** For local secondary indexes, you may choose between strong consistency and eventual consistency, just like on the underlying table. Strong consistency will consume more read capacity but can be the right choice in some situations.
 
 - **Shares throughput with underlying table.** All local secondary indexes use the read and write capacity units of the underlying table.
 

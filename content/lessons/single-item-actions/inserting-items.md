@@ -15,7 +15,7 @@ This lesson will only cover the basics of using these API calls. The next lesson
 
 ## Creating a table
 
-The first step is to create our table that we'll use throughout this example. We want to create a table to hold Users that will use a simple primary key of "Username" which is a string.
+The first step is to create our table that we'll use throughout this example. We want to create a table to hold Users that will use a simple primary key of "Username", which is a string.
 
 When creating a table, you will need to provide AttributeDefinitions for each attribute you need to define. An attribute definition includes the name and [type](./anatomy-of-an-item#attribute-types) of the attribute. For us, this means we have an attribute with the name "Username" and of type "S", for String. You only need to define attributes which are used in your [primary key](./anatomy-of-an-item#primary-keys) or are used in secondary indexes.
 
@@ -47,7 +47,7 @@ $ aws dynamodb create-table \
   $LOCAL
 ```
 
-If your operation was successfully, you should get a response with your table details:
+If your operation was successful, you should get a response with your table details:
 
 ```
 {

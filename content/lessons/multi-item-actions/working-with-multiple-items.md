@@ -17,7 +17,7 @@ In this lesson, we'll create a table with a composite primary key. Then, we'll s
 
 Creating a table with a composite primary key is similar to [creating a table with a simple primary key](./inserting-retrieving-items#creating-a-table). You define the attributes and your key schema when creating the table. The main difference is that you'll need to define _two_ attributes rather than one. You then have to specify which attribute is your HASH key and which is your RANGE key.
 
-The HASH key is how your data is partitioned, while the RANGE key is how that data is sorted within a particular HASH key. The HASH key is particularly important -- you can only grab data for a single HASH key in an Query operation. The HASH and RANGE keys allow for a one-to-many like structure -- for a single HASH key, there can be multiple RANGE keys.
+The HASH key is how your data is partitioned, while the RANGE key is how that data is sorted within a particular HASH key. The HASH key is particularly important -- you can only grab data for a single HASH key in a Query operation. The HASH and RANGE keys allow for a one-to-many like structure -- for a single HASH key, there can be multiple RANGE keys.
 
 When thinking about how to set up our data structure, think how you would fill in the blanks for the following query:
 
@@ -101,7 +101,7 @@ And the response shows your table description:
 }
 ```
 
-Very similar to when we created the UsersTable other than we've added a RANGE key in addition to a HASH key.
+This is very similar to when we created the UsersTable other than we've added a RANGE key in addition to a HASH key.
 
 ## Batch Write Item
 

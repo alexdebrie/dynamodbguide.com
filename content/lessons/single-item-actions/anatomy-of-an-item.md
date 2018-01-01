@@ -21,7 +21,7 @@ In this section, we'll cover the core aspects of Items, including:
 
 > **_Every item in a table is uniquely identified by its primary key._**
 
-When creating a new table, you will need to specify the primary key of that table. Every item is a table is uniquely identified by its primary key. Accordingly, the primary key must be included with every item that is written to a DynamoDB table.
+When creating a new table, you will need to specify the primary key of that table. Every item in a table is uniquely identified by its primary key. Accordingly, the primary key must be included with every item that is written to a DynamoDB table.
 
 There are two types of primary keys. A **simple primary key** uses a single attribute to identify an item, such as a Username or an OrderId. Using a DynamoDB table with a simple primary key is similar to using most simple key-value stores, such as Memcached.
 

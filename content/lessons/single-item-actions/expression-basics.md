@@ -9,7 +9,7 @@ type: "lesson"
 
 In this lesson, we will cover using expressions with DynamoDB. Expressions are an integral part of using DynamoDB, and they are used in a few different areas:
 
-- **[Condition expressions](#condition-expressions)** are used when when manipulating individual items to only change an item when certain conditions are true. 
+- **[Condition expressions](#condition-expressions)** are used when manipulating individual items to only change an item when certain conditions are true. 
 - **Projection expressions** are used to specify a subset of attributes you want to receive when reading Items. We used these in our GetItem calls in the previous lesson.
 - **[Update expressions](./updating-deleting-items#updating-items)** are used to update a particular attribute in an existing Item.
 - [**Key condition expressions**](./querying#using-key-expressions) are used when querying a table with a composite primary key to limit the items selected. 
@@ -19,7 +19,7 @@ Understanding these expressions is key to getting the full value from DynamoDB. 
 
 ## Basics of Expressions
 
-Expressions are strings that use DynamoDB's domain-specific expression logic to check for the validity of described statement. With expressions, you can use comparator symbols, such as "=" (equals), ">" (greater than), or ">=" (greater than or equal to). 
+Expressions are strings that use DynamoDB's domain-specific expression logic to check for the validity of a described statement. With expressions, you can use comparator symbols, such as "=" (equals), ">" (greater than), or ">=" (greater than or equal to). 
 
 For example, a comparator symbol could be used as follows:
 
@@ -31,7 +31,7 @@ to ensure that the Item being manipulated has an Age greater than or equal to 21
 
 > Note: this example wouldn't work as it wouldn't know the type of the value "21". You would need to use the [expression attribute values](#expression-attribute-values) discussed below.
 
-In addition to comparators, you can also use certain functions in your expressions. This includes checking whether a particular attribute exists (`attribute_exists()` function) or does not exist (`attribute_not_exists()` function), or than an attribute begins with a particular substring (`begins_with()` function).
+In addition to comparators, you can also use certain functions in your expressions. This includes checking whether a particular attribute exists (`attribute_exists()` function) or does not exist (`attribute_not_exists()` function), or that an attribute begins with a particular substring (`begins_with()` function).
 
 For example, you could use the `attribute_not_exists()` function as follows to ensure you're not manipulating an Order that already has a DateShipped attribute:
 
@@ -44,7 +44,7 @@ The full list of available functions is:
 - `attribute_exists()`: Check for existence of an attribute;
 - `attribute_not_exists()`: Check for non-existence of an attribute;
 - `attribute_type()`: Check if an attribute is of a certain type;
-- `begins_with()`: Check if attribute begins with a particular substring;
+- `begins_with()`: Check if an attribute begins with a particular substring;
 - `contains()`: Check if a String attribute contains a particular substring _or_ a Set attribute contains a particular element; and
 - `size()`: Returns a number indicating the size of an attribute.
 
@@ -125,7 +125,7 @@ Expression attribute values are similar to expression attribute names except tha
 The syntax for expression attribute values is the same as expression attribute names with two changes:
 
 - expression attribute values must start with a colon (":") rather than a pound sign; and
-- expression attribute values must specific the type for the value they are referencing, e.g.: `{":agelimit": {"N": 21} }`
+- expression attribute values must specify the type for the value they are referencing, e.g.: `{":agelimit": {"N": 21} }`
 
 For examples of using expression attribute values, look at the [next lesson](./updating-deleting-items#using-the-set-update-clause) where we use Update Expressions.
 

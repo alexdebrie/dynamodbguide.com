@@ -45,7 +45,7 @@ Your options for attribute projections are:
 
 - **KEYS_ONLY**: Your index will include only the keys for the index and the table's underlying partition and sort key values, but no other attributes.
 
-- **ALL:** The full Item is available in the secondary index will all attributes.
+- **ALL:** The full Item is available in the secondary index with all attributes.
 
 - **INCLUDE:** You may choose to name certain attributes that are projected into the secondary index.
 

@@ -7,7 +7,7 @@ date: "1/1/2018"
 type: "lesson"
 ---
 
-In previous sections, we've covered key expressions, condition expressions, projection expressions, and update expressions. This lesson has the final kind of expression -- _filter expressions_. 
+In previous sections, we've covered key expressions, condition expressions, projection expressions, and update expressions. This lesson discusses the final kind of expression -- _filter expressions_. 
 
 Filter expressions are used to apply server-side filters on Item attributes _before_ they are returned to the client making the call. Before we dig too deeply into filters, let's first understand what's happening during a Query or Scan API call. 
 
@@ -66,7 +66,7 @@ The response includes only one Order:
 }
 ```
 
-One other note -- look at the difference between "ScannedCount" and "Count". ScannedCount refers to the number of Items retrieved in Step 1 above. Count refers to the number of Items returned to the client.
+Another note -- look at the difference between "ScannedCount" and "Count". ScannedCount refers to the number of Items retrieved in Step 1 above. Count refers to the number of Items returned to the client.
 
 Previously, these numbers were the same as we weren't filtering the retrieved items. Now that we've applied a filter, we see there were 4 total Orders for Daffy Duck but only 1 of them had an amount over $100. We consumed read capacity for those 4 scanned units, but only 1 was returned to us.
 

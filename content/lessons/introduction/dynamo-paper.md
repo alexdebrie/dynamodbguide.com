@@ -7,23 +7,20 @@ date: "01/01/2018"
 type: "lesson"
 ---
 
-In 2007, a group of Amazon.com engineers published the [Dynamo Whitepaper](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf). It described the learnings from building an in-house, highly available key-value store designed to meet the demanding requirements of the Amazon.com website.
+In 2004, Amazon.com was growing rapidly and was starting to hit the upper scaling limits of its Oracle database. It started to consider building its own database in-house (_note to readers: this is almost always a bad idea_).  Out of this experiment, the engineers created the Amazon Dynamo database which backed major internal infrastructure including the shopping cart on the Amazon.com website. 
 
-The paper was highly influential and inspired a number of NoSQL databases, including Apache Cassandra (originally developed at Facebook) and AWS offerings SimpleDB and DynamoDB. 
+A group of engineers behind the Amazon Dynamo database published the [Dynamo Paper](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) in 2007. It described the learnings from building an in-house, highly available key-value store designed to meet the demanding requirements of the Amazon.com website.
 
-## Background
+The paper was highly influential and inspired a number of NoSQL databases, including Apache Cassandra (originally developed at Facebook) and AWS offerings SimpleDB and DynamoDB. In 2012, Amazon Web Services launched DynamoDB, which was a managed database service modeled after the principles behind Dynamo.
 
-In 2004, Amazon.com was growing rapidly and was starting to hit the upper scaling limits of its Oracle database. It started to consider building its own database in-house (_note to readers: this is almost always a bad idea_). 
-
-Out of this experiment, the engineers created the Amazon Dynamo database which backed major internal infrastructure including the shopping cart on the Amazon.com website. The engineers behind the paper wrote the Dynamo paper to explain their findings. In 2012, Amazon Web Services launched DynamoDB, which was a managed database service modeled after the principles behind Dynamo.
 
 ## Key aspects of Dynamo
 
 #### No Relational model
 
-The relational data model is a useful way to model many types of data. Often, relational data is [normalized](https://en.wikipedia.org/wiki/Database_normalization) to improve the integrity of the data. Rather than duplicating a particular piece of data in multiple rows, you can store it in one place and refer to it a JOIN operation from one table to another. Now you can update that single place, and all items that refer to that data will gain the benefits of the update as well.
+The relational data model is a useful way to model many types of data. Often, relational data is [normalized](https://en.wikipedia.org/wiki/Database_normalization) to improve the integrity of the data. Rather than duplicating a particular piece of data in multiple rows, you can store it in one place and refer to it using a JOIN operation from one table to another. Now you can update that single place, and all items that refer to that data will gain the benefits of the update as well.
 
-Yet one of the most interesting findings that the Amazon.com engineers discovered while gathering their database requirements was how their engineers were using their relational databases:
+Yet one of the most interesting findings of the Amazon.com engineers while gathering their database requirements was how their engineers were using their relational databases:
 
 > About 70 percent of operations were of the key-value kind, where only a primary key was used and a single row would be returned. About 20 percent would return a set of rows, but still operate on only a single table.
 > 
@@ -39,7 +36,7 @@ Amazon.com engineers were already making that trade-off of denormalization to im
 
 Most relational databases use a _strongly consistent_ model for their data. Briefly, this means all clients of the server will see the same data if querying at the same time. 
 
-Let's use Twitter as an example. Imagine that Bob in Virginia tweets a cat picture at 2:30 PM. There are two users that view Bob's profile after he tweets his picture: his neighbor, Cheryl and his uncle, Jeffrey, who lives in Singapore. If Twitter were using a strongly-consistent model, both Cheryl and Jeffrey should see Bob's most recent tweet as soon as it's committed to the database from Bob's action.
+Let's use Twitter as an example. Imagine that Bob in Virginia tweets a cat picture at 2:30 PM. There are two users that view Bob's profile after he tweets his picture: his neighbor, Cheryl, and his uncle, Jeffrey, who lives in Singapore. If Twitter were using a strongly-consistent model, both Cheryl and Jeffrey should see Bob's most recent tweet as soon as it's committed to the database from Bob's action.
 
 This might not be ideal, for a few reasons. First, think of the geography involved in this scenario. Twitter could choose to have a single database instance to enable this strong consistency. This database instance may be located in Virginia, close to Bob and Cheryl. This results in fast responses to Bob and Cheryl, but very slow responses to Jeffrey as each request must cross an ocean from Singapore to Virginia to request the data, then return from Virginia to Singapore to return it to Jeffrey. _This results in slower read times to some users_.
 
@@ -53,7 +50,7 @@ _Note: This section is a massive simplification of consistency, availability, an
 
 #### Infinitely Scalable
 
-The final key aspect of Dynamo is that it is infinitely scalable without any negative performance impacts. This aspect is a resulting of the relaxing of relational and consistency constraints from prior databases.
+The final key aspect of Dynamo is that it is infinitely scalable without any negative performance impacts. This aspect is a result of the relaxing of relational and consistency constraints from prior databases.
 
 When scaling out a system, you can either vertically scale (use a larger server instance with more CPUs or RAM) or you can horizontally scale by splitting your data across multiple machines, each of which has a subset of your full dataset. Vertical scaling gets expensive and eventually hits limits based on available technology. Horizontal scaling is cheaper but more difficult to achieve.
 

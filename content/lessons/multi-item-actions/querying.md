@@ -11,9 +11,9 @@ Querying is a very powerful operation in DynamoDB. It allows you to select multi
 
 In this lesson, we'll learn some basics around the Query operation including using Queries to:
 
-- [retrieving all Items with a given partition key](#retrieving-all-items-with-a-given-partition-key);
-- [using key expressions](#using-key-expressions) to limit Items based on the RANGE key; and
-- using projection expressions to [narrow the response](#narrowing-your-query-results) for your Query.
+- [retrieve all Items with a given partition key](#retrieving-all-items-with-a-given-partition-key);
+- [use key expressions](#using-key-expressions) to limit Items based on the RANGE key; and
+- use projection expressions to [narrow the response](#narrowing-your-query-results) for your Query.
 
 
 Before reading this section, you should understand [DynamoDB expressions](./expression-basics).
@@ -179,7 +179,7 @@ Our results return three Items rather than all four of Daffy's Orders:
 
 Daffy's fourth order was in 2016 so it did not satisfy our Key Expression.
 
-These Key Expressions are very useful for enabling more specific query patterns but note the limitations. Because the Key Expression can only operate on the HASH and RANGE key, you need to build the relevant data into the keys directly. Further, it limits the number of query patterns you can enable. Choosing to start your RANGE key with the OrderDate means you can't do a Key Expression based on the Amount of the Order.
+These Key Expressions are very useful for enabling more specific query patterns, but note the limitations. Because the Key Expression can only operate on the HASH and RANGE key, you need to build the relevant data into the keys directly. Further, it limits the number of query patterns you can enable. Choosing to start your RANGE key with the OrderDate means you can't do a Key Expression based on the Amount of the Order.
 
 In future lessons, we'll see other ways to enable more advanced queries, including with [filters](./filtering) or by using [global secondary indexes](./global-secondary-indexes) and [local secondary indexes](./local-secondary-indexes).
 

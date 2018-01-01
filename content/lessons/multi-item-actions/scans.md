@@ -31,7 +31,7 @@ With these caveats out of the way, let's explore the Scan call.
 
 # Scan basics
 
-The Scan call is likely the easiest of all DynamoDB calls. Simple provide a table name, and it will return all Items in the table (up to a 1MB limit):
+The Scan call is likely the easiest of all DynamoDB calls. Simply provide a table name, and it will return all Items in the table (up to a 1MB limit):
 
 ```bash
 $ aws dynamodb scan \
