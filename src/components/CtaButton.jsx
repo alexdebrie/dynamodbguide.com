@@ -18,16 +18,17 @@ class ctaButton extends Component {
 export default ctaButton
 
 const ButtonContainer = styled.div`
+  background: white;
   border: 1px solid ${props => props.theme.brand};
   border-radius: 3px;
   padding: 25px;
   font-size: 2rem;
-  color: ${props => props.theme.brand};
+  color: black;
   display: inline-block;
   transition: all .3s ease;
   
   &:hover {
+    background: black;
     color: white;
-    background: ${props => props.theme.brand};
   }
 `

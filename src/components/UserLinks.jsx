@@ -32,7 +32,7 @@ class UserLinks extends Component {
   render() {
     return (
       <Container className="user-links">
-        <UserIcon href='https://github.com/alexdebrie'>
+        <UserIcon href='https://github.com/alexdebrie/dynamodbguide.com'>
           <FaGithubAlt style={iconStyle} />
         </UserIcon>
         <UserIcon href='https://twitter.com/alexbdebrie?lang=en'>

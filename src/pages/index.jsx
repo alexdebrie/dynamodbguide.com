@@ -22,14 +22,11 @@ class Index extends React.Component {
               <img src={config.siteLogo} width='150px' />
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
+              <CtaButton to={'/what-is-dynamo-db'}>Start Learning DynamoDB</CtaButton>
+              <p>{"Inspired by Craig Kerstiens'"} <a href="http://postgresguide.com/">Postgres Guide</a>.</p>
+              <p>Built with <a href="https://www.gatsbyjs.org/">Gatsbyjs</a> and the <a href="https://github.com/ericwindmill/gatsby-starter-docs">gatsby-starter-docs</a> template.</p>
             </Hero>
           </IndexHeadContainer>
-          <BodyContainer>
-            <h2>Learn the the What, Why, and How of DynamoDB.</h2>
-            <CtaButton to={'/what-is-dynamo-db'}>Start Learning DynamoDB</CtaButton>
-            <p>{"Inspired by Craig Kerstiens'"} <a href="http://postgresguide.com/">Postgres Guide</a>.</p>
-            <p>Built with <a href="https://www.gatsbyjs.org/">Gatsbyjs</a> and the <a href="https://github.com/ericwindmill/gatsby-starter-docs">gatsby-starter-docs</a> template.</p>
-          </BodyContainer>
         </main>
       </div>
     );
@@ -37,12 +34,6 @@ class Index extends React.Component {
 }
 
 export default Index;
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-  max-width: ${props => props.theme.contentWidthLaptop};
-  margin: 0 auto;
-`
 
 const IndexHeadContainer = styled.div`
   background: ${props => props.theme.brand};
