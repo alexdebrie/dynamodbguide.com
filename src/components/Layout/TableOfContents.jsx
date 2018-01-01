@@ -102,8 +102,7 @@ const TableOfContentsContainer = styled.div`
   }
   
   .tocHeading {
-     font-weight: 200;
-     color: ${props => props.theme.brand};
+     font-weight: 700;
      margin-bottom: 10px;
   }
 `
