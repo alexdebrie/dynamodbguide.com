@@ -41,6 +41,7 @@ class Navigation extends React.Component {
           <Link className='nav-link' to='/' > HOME </Link>
           <Link className='nav-link' to='/what-is-dynamo-db' > GUIDE </Link>
           <Link className='nav-link' to='/about' > ABOUT </Link>
+          <Link className='nav-link' to='https://eepurl.com/df8gjb' target="_blank" > SUBSCRIBE </Link>
         </section>
         <span><UserLinks /></span>
       </NavContainer>
