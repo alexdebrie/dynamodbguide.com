@@ -66,6 +66,7 @@ const BodyContainer = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;  
   justify-self: center;
   width: 100%;
   padding: ${props => props.theme.sitePadding};
@@ -108,6 +109,7 @@ const ToCContainer = styled.div`
   grid-row: 2 / 3;
   background: ${props => props.theme.lightGrey};
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   @media screen and (max-width: 600px) {
     order: 3;
     overflow: inherit;
