@@ -1,6 +1,7 @@
 ---
 title: "Overview"
 description: "Examples of data modeling with AWS DynamoDB"
+slug: "data-modeling-overview"
 lesson: 1
 chapter: 6
 date: "01/01/2018"
