@@ -9,7 +9,7 @@ type: "lesson"
 
 In this example, we'll show how to model hierarchical data using DynamoDB. We'll insert a real dataset of 25,000 Starbucks locations into DynamoDB. **You can follow along with some [real example code](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks) from the examples directory in this site's repository.**
 
-Hierarchical data is a common relational data pattern for representing tree-like data structures, such as an organizational structure, a project breakdown list, or even a family tree. In a relational database, it often uses quite a few JOINs to get your answer.
+Hierarchical data is a common relational data pattern for representing tree-like data structures, such as an organizational structure, a project breakdown list, or even a family tree. In a relational database, it often uses quite a few JOINs to get your answer. Here, we'll see how we can model this data using a single table to enable fast, precise lookups.
 
 > This example is inspired by Rick Houlihan's talk at reInvent 2017. Check here for the [relevant section](https://youtu.be/jzeKPKpucS0?t=36m5s).
 
@@ -55,7 +55,7 @@ For us, we'll use the Store Number as a simple primary key. If we were updating 
 We then need to think about our other four read access patterns -- gathering all stores by country, state, city, and zip. We'll discuss this pattern more in the [Gather queries](#gather-queries) section, but for now, we're going to create a [global secondary index](./global-secondary-index) named "StoreLocationIndex" with the following key structure:
 
 - a HASH key of Country, indicating the country where the store is located, and
-- a RANGE key named StateCityZipcode that is a string combining the State, City, and Zipcode with each element separated by the pound sign (`<STATE>#<CITY>#<ZIPCODE>`). For example, a store in Omaha, NE would be stored as `NE#OMAHA#68144`.
+- a RANGE key named StateCityPostcode that is a string combining the State, City, and Postcode with each element separated by the pound sign (`<STATE>#<CITY>#<POSTCODE>`). For example, a store in Omaha, NE would be stored as `NE#OMAHA#68144`.
 
 To create this table, run the [script to create the table](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/create_table.py). If it works, you should get a success message:
 
@@ -152,13 +152,13 @@ Store number found! Here's your store:
 
 Time to move onto the fun part. We have four additional queries we want to use, and we're going to handle it with a single global secondary index.
 
-The hierarchical structure of the data is important here. Stores in the same State are in the same Country, stores in the same City are in the same State, and stores in the same Zipcode are in the same City, (ssh, [apparently that's not exactly true](https://github.com/Ziptastic/ziptastic-jquery-plugin/issues/2)).
+The hierarchical structure of the data is important here. Stores in the same State are in the same Country, stores in the same City are in the same State, and stores in the same Postcode are in the same City, (ssh, [apparently that's not exactly true](https://github.com/Ziptastic/ziptastic-jquery-plugin/issues/2)).
 
 Because of this hierarchical structure, we can use our computed SORT key plus the `begins_with()` function to find all stores at a particular level.
 
-Let's use an example. Think of two different Starbucks stores, our Pasadena example from the previous section, plus a store in San Francisco.
+Let's use an example. Think of two different Starbucks stores - our Pasadena example from the previous section, plus a store in San Francisco.
 
-Our StateCityPostcode RANGE key for the first store is `CA#PASADENA#911033383`. The StateCityPostcode for the second store is `CA#SAN FRANCISCO#94158`. _Notice how they both start with "CA", and then add their city and post codes.
+Our StateCityPostcode RANGE key for the first store is `CA#PASADENA#911033383`. The StateCityPostcode for the second store is `CA#SAN FRANCISCO#94158`. Notice how they both start with "CA", and then add their city and post codes.
 
 If I wanted to query for _all_ California stores, I would make a [key expression](./querying#using-key-expressions) that looks like this:
 
@@ -166,7 +166,7 @@ If I wanted to query for _all_ California stores, I would make a [key expression
 Country = "US" AND AND begins_with(StateCityPostcode, "CA")
 ```
 
-_Note: This is simplified, as I would actually need to use [expression attribute values](./expression-basics#expression-attribute-values) to represent "US" and "CA".
+_Note: This is simplified, as I would actually need to use [expression attribute values](./expression-basics#expression-attribute-values) to represent "US" and "CA"._
 
 What if I want to get even more specific and query all stores _in San Francisco_? Now my key expression looks like:
 
@@ -180,7 +180,7 @@ Finally, I could get all the way to the post code level by using:
 Country = "US" AND AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO#94158")
 ```
 
-You can see this in action by using the [`query_store_location.py](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/query_store_location.py) in the example repo.
+You can see this in action by using the [`query_store_location.py`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/query_store_location.py) in the example repo.
 
 First, let's query all of the stores in the US. I'm using the `--count` flag to only return the count of stores, rather than the full item to avoid trashing my terminal:
 
