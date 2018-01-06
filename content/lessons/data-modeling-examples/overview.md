@@ -8,6 +8,19 @@ date: "01/01/2018"
 type: "lesson"
 ---
 
-I'd like to add data modeling examples for common use cases including one-to-one relationships, one-to-many, many-to-many, graphs, and more.
+This chapter includes a number of case studies, each exploring a way to model data in DynamoDB for a particular scenario. Sometimes, seeing a single example is better than reading pages of documentation.
 
-Are there particular use cases you'd like to see? [Hit me up](mailto:alexdebrie1@gmail.com) and let me know!
+This chapter is intended to grow over time. Are there particular use cases you'd like to see? [Hit me up](mailto:alexdebrie1@gmail.com) and let me know!
+
+Available & planned examples:
+
+- Scaling write bottlenecks* (Coming soon!)
+- Time-based workflows* (Coming soon!)
+- Enum attributes* (Coming soon!)
+- Working with large items* (Coming soon!)
+- ACID transactions* (Coming soon!)
+- Geo-hashing* (Coming soon!)
+- [Hierarchical data*](./hierarchical-data)
+- Graph queries and adjacency lists* (Coming soon!)
+
+\* -- Example from Rick Houlihan's [excellent reInvent talk](https://www.youtube.com/watch?v=jzeKPKpucS0).
