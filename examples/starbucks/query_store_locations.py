@@ -43,7 +43,7 @@ def query_store_locations(country, state, city, postcode, default_state, default
     print(info_message)
     key_condition_expression = "Country = :country"
     expression_values = {
-        ":country": {"S": "US"},
+        ":country": {"S": country},
     }
     if statecitypostcode:
         key_condition_expression += " AND begins_with(StateCityPostcode, :statecitypostcode)"
