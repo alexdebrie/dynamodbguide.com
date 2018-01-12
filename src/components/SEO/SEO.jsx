@@ -73,6 +73,7 @@ class SEO extends Component {
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />
+        <meta name="google-site-verification" content="bsVXBnxnYcmqu8vci9-KFQ6NhNhKZdaHbTyc046Xhcg" />
 
         {/* Schema.org tags */}
         <script type="application/ld+json">
