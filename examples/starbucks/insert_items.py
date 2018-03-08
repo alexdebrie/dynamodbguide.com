@@ -1,3 +1,4 @@
+import codecs
 import csv
 
 import boto3
@@ -30,7 +31,7 @@ def write_item(row):
 
 if __name__ == "__main__":
     count = 0
-    with open('directory.csv', 'r') as f:
+    with codecs.open('directory.csv', 'r', encoding='utf8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             write_item(row)
