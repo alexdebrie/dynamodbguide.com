@@ -17,6 +17,7 @@ module.exports = {
     }
   },
   plugins: [
+    "gatsby-plugin-remove-trailing-slashes",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
