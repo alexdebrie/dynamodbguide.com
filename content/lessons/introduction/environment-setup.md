@@ -90,7 +90,7 @@ If you want to use the DynamoDB local emulator, you'll need to append the follow
 I don't like typing the full flag every time so I export it to a variable and use that shorthand:
 
 ```bash
-$ export LOCAL="--endpoint-url http://localhost:8000
+$ export LOCAL="--endpoint-url http://localhost:8000"
 
 $ aws dynamodb list-tables $LOCAL
 ```
