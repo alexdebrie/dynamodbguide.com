@@ -31,7 +31,13 @@ The last two points can be confusing. The first refers to the primary key schema
 
 Like local secondary indexes, you may specify a global secondary index when you initially create a table. However, you may also add a global secondary index after a table is already created. DynamoDB will backfill the global secondary index based on the existing data in the table.
 
-In this example, let's show how we might use a _sparse index_ for our global secondary index. A sparse index is when not every Item contains the attribute you're indexing. Only Items with the attribute(s) matching the key schema for your index will be copied into the index, so you may end up with fewer Items in the index than in the underlying table.
+**IMPORTANT**: updating an existing table to create a global secondary index that implies an update to the existing [*AttributeDefinitions*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) of the base table will result in the [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#Replacement) of the existing table: a new table will be created and all all existing records will be lost.
+
+Before updating a table to create a new global secondary index that implies an update to the existing [*AttributeDefinitions*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html), remember to backup the existing table contents.
+
+In this example, we will be making use of the table created in the [working with multiple items](./working-with-multiple-items.md) lesson. 
+
+Let's show how we might use a _sparse index_ for our global secondary index. A sparse index is when not every Item contains the attribute you're indexing. Only Items with the attribute(s) matching the key schema for your index will be copied into the index, so you may end up with fewer Items in the index than in the underlying table.
 
 Imagine we want to keep track of Orders that were returned by our Users. We'll store the date of the return in a ReturnDate attribute. We'll also add a global secondary index with a composite key schema using ReturnDate as the HASH key and OrderId as the RANGE key.
 
@@ -73,7 +79,12 @@ $ aws dynamodb update-table \
     $LOCAL
 ```
 
-The syntax to add a global secondary index is similar to that of adding a local secondary index. Note that I didn't need to redefine the keys of my underlying table in the `--attribute-definitions` section, only the new attribute that I was using for the index.
+The syntax to add a global secondary index is similar to that of adding a local secondary index. 
+Note that I didn't need to redefine the keys of my underlying table in the `--attribute-definitions` section, only the new attribute that I was using for the index.
+
+**IMPORTANT**: once again, notice that the update in this example implies a data loss due to the replacement operation triggered from the update to the existing [*AttributeDefinitions*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) of the base table. Before doing this operation, back up the data of the existing table to prevent data loss.
+
+However, if the attribute used for the new index, was already part of the [*AttributeDefinitions*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) of the base table, the update to add a new global secondary index would not imply data loss.
 
 ## Querying a Global Secondary Index
 
