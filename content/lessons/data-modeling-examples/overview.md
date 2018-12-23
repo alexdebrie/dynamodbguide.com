@@ -34,4 +34,4 @@ This chapter is intended to grow over time. Are there particular use cases you'd
 - Geo-hashing*
 - Graph queries and adjacency lists*
 
-\* -- Example from Rick Houlihan's [excellent reInvent talk](https://www.youtube.com/watch?v=jzeKPKpucS0).
+\* -- Example from Rick Houlihan's [excellent 2017 reInvent talk](https://www.youtube.com/watch?v=jzeKPKpucS0).
