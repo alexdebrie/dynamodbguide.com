@@ -22,7 +22,7 @@ This chapter is intended to grow over time. Are there particular use cases you'd
 	
 - [**Modeling hierarchical data***](./hierarchical-data)
 
-	This example shows how to model hierarchical data. **It includes a full code sample that uses >25,000 Starbucks store locations.** Learn how to satisfy multiple access patterns, including finding all stores in a particular store, all stores in a particular city, and all stores in a particular zip code.
+	This example shows how to model hierarchical data. **It includes a full code sample that uses >25,000 Starbucks store locations.** Learn how to satisfy multiple access patterns, including finding all stores in a particular state, all stores in a particular city, and all stores in a particular zip code.
 
 	
 ### Planned examples:
