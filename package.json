@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "author": "Eric Windmill <eric@ericwindmill.com>",
   "dependencies": {
-    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-lodash": "^3.3.4",
     "gatsby": "^1.8.11",
     "gatsby-link": "^1.6.7",
     "gatsby-plugin-catch-links": "^1.0.4",
@@ -26,7 +26,7 @@
     "gatsby-remark-responsive-iframe": "^1.4.2",
     "gatsby-source-filesystem": "^1.4.2",
     "gatsby-transformer-remark": "^1.7.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.4",
     "react": "^15.6.1",
     "react-disqus-comments": "^1.0.3",
@@ -49,7 +49,7 @@
     "prettier": "^1.5.3",
     "remark-cli": "^4.0.0",
     "remark-preset-lint-recommended": "^3.0.1",
-    "stylefmt": "^6.0.0",
+    "stylefmt": "^6.0.3",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
     "write-good": "^0.11.3"

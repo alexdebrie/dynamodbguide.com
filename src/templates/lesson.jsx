@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components"
 
+import Disqus from '../components/Disqus/Disqus'
 import SEO from "../components/SEO/SEO"
 import SiteHeader from '../components/Layout/Header'
 import config from "../../data/SiteConfig"
@@ -42,6 +43,7 @@ export default class LessonTemplate extends React.Component {
               </h1>
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             </div>
+            <Disqus postNode={postNode} />
           </BodyContainer>
         </BodyGrid>
       </div>
