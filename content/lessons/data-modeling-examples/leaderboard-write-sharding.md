@@ -163,7 +163,7 @@ Now that we understand the pattern of write sharding, let's close with a few thi
 
 1. **To write shard or not to write shard?** 
 
-	The first question is whether you truly need write sharding at all. Write sharding adds complication to your application, both at write team (randomizing your partition attribute) and at read time (implementing scatter-gather).
+	The first question is whether you truly need write sharding at all. Write sharding adds complication to your application, both at write time (randomizing your partition attribute) and at read time (implementing scatter-gather).
 	
 	You should only use write sharding if your write traffic is too high for the GSI to handle writing to a single partition.
 
