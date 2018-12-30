@@ -9,7 +9,7 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
 //  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-111332094-1", // GA tracking ID.
-//  disqusShortname: "https-ericwindmill-github-io-gatsby-advanced-starter", // Disqus shortname.
+  disqusShortname: "dynamodbguide", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userName: "Alex DeBrie",
