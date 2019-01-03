@@ -54,10 +54,6 @@ $ aws dynamodb update-table \
                     {
                         "AttributeName": "ReturnDate",
                         "KeyType": "HASH"
-                    },
-                    {
-                        "AttributeName": "OrderId",
-                        "KeyType": "RANGE"
                     }
                 ],
                 "Projection": {
