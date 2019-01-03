@@ -44,6 +44,10 @@ $ aws dynamodb update-table \
       {
           "AttributeName": "ReturnDate",
           "AttributeType": "S"
+      },
+      {
+          "AttributeName": "OrderId",
+          "AttributeType": "S"
       }
     ]' \
     --global-secondary-index-updates '[
@@ -54,6 +58,10 @@ $ aws dynamodb update-table \
                     {
                         "AttributeName": "ReturnDate",
                         "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "OrderId",
+                        "KeyType": "RANGE"
                     }
                 ],
                 "Projection": {
