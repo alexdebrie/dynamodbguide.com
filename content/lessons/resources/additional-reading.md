@@ -11,6 +11,8 @@ type: "lesson"
 
 - [Faux-SQL or NoSQL? Examining four DynamoDB Patterns in Serverless Applications](https://www.alexdebrie.com/posts/dynamodb-patterns-serverless/) - This is a post I wrote on the common data modeling patterns I see with DynamoDB in serverless applications.
 - [Why Amazon DynamoDB isn't for everyone](https://read.acloud.guru/why-amazon-dynamodb-isnt-for-everyone-and-how-to-decide-when-it-s-for-you-aefc52ea9476) - My favorite post on this topic. Forrest Brazeal does a great job breaking down the pros and cons of DynamoDB.
+- [From relational DB to single DynamoDB table: a step-by-step exploration](https://www.trek10.com/blog/dynamodb-single-table-relational-modeling/) - Another great post by Forrest Brazeal. It's a detailed walkthrough of how to use the single-table DynamoDB pattern in a complex use case.
+- [Why the PIE theorem is more relevant than the CAP theorem](https://www.alexdebrie.com/posts/choosing-a-database-with-pie/) - Another post I wrote about choosing a database that includes consideration of DynamoDB.
 
 ### Videos:
 

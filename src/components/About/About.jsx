@@ -16,7 +16,7 @@ class About extends Component {
           It's modeled after Craig Kerstien's <a href="http://postgresguide.com/">Postgres Guide</a>, which was very useful to me when I was learning Postgres.
         </p>
         <p>
-          <b>Who:</b> I'm <a href="https://twitter.com/alexbdebrie">Alex DeBrie</a>. 
+          <b>Who:</b> I'm <a href="https://twitter.com/alexbdebrie">Alex DeBrie</a>. I blog at <a href="https://alexdebrie.com">alexdebrie.com</a>.
           I work at <a href="https://www.serverless.com">Serverless, Inc.</a>, creators of the <a href="https://github.com/serverless/serverless">Serverless Framework</a>. ⚡️
           Before that, I was an Infrastructure Engineer & Data Engineer at a sports video startup, and I had a brief stint as a corporate lawyer.
         </p>
