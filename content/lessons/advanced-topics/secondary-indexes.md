@@ -3,7 +3,7 @@ title: "Secondary Indexes"
 description: "Learn about secondary indexes with AWS DynamoDB."
 lesson: 1
 chapter: 4
-date: "01/01/2018"
+date: "03/20/2019"
 type: "lesson"
 ---
 
@@ -35,7 +35,7 @@ There are a few basics of secondary indexes that are worth knowing:
   
 - **Secondary index attributes aren't required.** When writing an Item, you _must_ specify the primary key elements. This isn't true with secondary indexes -- you may write an Item that doesn't include the attributes for secondary indexes. If you do this, the Item won't be written to the secondary index. This is known as a _sparse index_ and can be a very useful pattern.
 
-- **Index limits per table.** You may create 5 global secondary indexes and 5 local secondary indexes per table.
+- **Index limits per table.** You may create 20 global secondary indexes and 5 local secondary indexes per table.
 
 ## Projected Attributes
 
