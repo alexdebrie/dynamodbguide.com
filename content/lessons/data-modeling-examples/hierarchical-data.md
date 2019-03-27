@@ -180,7 +180,7 @@ Finally, I could get all the way to the post code level by using:
 Country = "US" AND AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO#94158")
 ```
 
-You can see this in action by using the [`query_store_location.py`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/query_store_location.py) in the example repo.
+You can see this in action by using the [`query_store_locations.py`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/query_store_locations.py) in the example repo.
 
 First, let's query all of the stores in the US. I'm using the `--count` flag to only return the count of stores, rather than the full item to avoid trashing my terminal:
 
