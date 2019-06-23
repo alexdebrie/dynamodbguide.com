@@ -21,6 +21,8 @@ There are a few ways in which global secondary indexes differ from local seconda
 
 - **No partition key size limits.** Partition keys are limited to 10GB between the table Items and all local secondary indexes. Global secondary indexes are not counted in these limits.
 
+- **Index partition key does not need to be unique.** This was already mentioned on the parent page but is repeated here because it tends to be forgotten or ignored. Index partition keys don't have to be unique. This is critical to understand for building many query design patterns.
+
 - **Use on any table.** Local secondary indexes may only be used on tables with composite primary keys. Global secondary indexes do not have this restriction -- you can use them on tables with simple or composite primary keys.
 
 - **Use with any key schema.** When specifying the key schema for your global secondary index, you can use either a simple or a composite key schema.
