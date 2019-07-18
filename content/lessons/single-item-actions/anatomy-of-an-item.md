@@ -33,7 +33,7 @@ Understanding the primary key is a crucial part of planning your data model for 
 
 An item is made up of _attributes_, which are different elements of data on a particular item. For example, an item in the User table might have a Name attribute, an Age attribute, an Address attribute, and more. They are comparable to columns in a relational database.
 
-Most attributes in a DynamoDB table are _not_ required for every item. DynamoDB is a NoSQL database which allows for a more flexible data model than the standard relational databases. You could store entirely different kinds of objects in a single DynamoDB table, such as a Car object with Make, Model, and Year attributes, and a Pet object with Type, Breed, Age, and Color attributes. This isn't usually a best practice, but the flexible model of DynamoDB allows it if desired.
+Most attributes in a DynamoDB table are _not_ required for every item. DynamoDB is a NoSQL database which allows for a more flexible data model than the standard relational databases. You could store entirely different kinds of objects in a single DynamoDB table, such as a Car object with Make, Model, and Year attributes, and a Pet object with Type, Breed, Age, and Color attributes. This is a common practice, as you will often have multiple different entity types in a single table.
 
 There is one exception to the flexible model of DynamoDB items -- each item **must** have the attribute(s) for the defined [primary key](#primary-keys) of the table.
 
