@@ -26,3 +26,4 @@ type: "lesson"
 - [AWS CLI reference for DynamoDB](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html)
 - [Boto3 (Python client library for AWS) docs](http://boto3.readthedocs.io/en/latest/reference/services/dynamodb.html)
 - [Javascript client library for AWS](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html)
+- [Document Client cheat sheet (Javascript)](https://github.com/dabit3/dynamodb-documentclient-cheat-sheet). Created by [Nader Dabit](https://twitter.com/dabit3).
