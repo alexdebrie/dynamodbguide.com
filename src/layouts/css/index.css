@@ -69,3 +69,17 @@ blockquote {
   font-style: italic;
   padding-left: 18px;
 }
+
+.intro-summary {
+    background-color: #F6F6F6;
+    font-style: normal;
+    padding: 15px;
+    text-align: center;
+    ul {
+      padding-left: 70px;
+      padding-right: 10px
+    }
+    li {
+      text-align: left;
+    }
+  }
