@@ -16,6 +16,14 @@ const NavContainer = styled.div`
     color: black;
   }
 
+  .highlight {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 6px;
+    background: #F6F6F6;
+    font-weight: bolder;
+  }
+
   @media screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -41,7 +49,7 @@ class Navigation extends React.Component {
           <Link className='nav-link' to='/' > HOME </Link>
           <Link className='nav-link' to='/what-is-dynamo-db' > GUIDE </Link>
           <Link className='nav-link' to='/about' > ABOUT </Link>
-          <Link className='nav-link' to='https://eepurl.com/df8gjb' target="_blank" > SUBSCRIBE </Link>
+          <a className='nav-link highlight' href="https://www.dynamodbbook.com">GET THE BOOK!</a>
         </section>
         <span><UserLinks /></span>
       </NavContainer>
