@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Disqus from '../components/Disqus/Disqus'
 import SEO from "../components/SEO/SEO"
 import SiteHeader from '../components/Layout/Header'
+import CtaButtonBook from '../components/CtaButtonBook'
 import config from "../../data/SiteConfig"
 import TableOfContents from "../components/Layout/TableOfContents";
 
@@ -38,6 +39,13 @@ export default class LessonTemplate extends React.Component {
           </ToCContainer>
           <BodyContainer>
             <div>
+            <div className="intro-summary">
+              <h3>Want to learn more about DynamoDB data modeling?</h3>
+              <a href="https://www.dynamodbbook.com"><h4><u>Get the DynamoDB Book!</u></h4></a>
+              <p>The DynamoDB Book is a <strong>comprehensive guide</strong> to modeling your DynamoDB tables</p>
+              <p> Learn the how, what, and why to DynamoDB modeling with <strong>real examples</strong></p>
+              <CtaButtonBook link={'https://www.dynamodbbook.com'}>I want the book!</CtaButtonBook>
+            </div>
               <h1>
                 {post.title}
               </h1>
