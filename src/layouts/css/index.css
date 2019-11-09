@@ -70,16 +70,10 @@ blockquote {
   padding-left: 18px;
 }
 
-.intro-summary {
+.book-blurb{
     background-color: #F6F6F6;
     font-style: normal;
-    padding: 15px;
+    padding: 25px;
     text-align: center;
-    ul {
-      padding-left: 70px;
-      padding-right: 10px
-    }
-    li {
-      text-align: left;
-    }
+    margin-bottom: 15px;
   }
