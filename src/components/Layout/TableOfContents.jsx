@@ -49,16 +49,14 @@ class TableOfContents extends React.Component {
         let key = `${node.chapter}-${node.lessonNumber}`;
         chapterNumber = `${node.chapter}`;
         chapterLessons.push(
-          <LessonContainer key={key}>
-            <Link to={node.path}>
-              <li>
-                <span>
-                  <p>{node.chapter}.{node.lessonNumber} &nbsp;</p>
-                  <h6>{node.title}</h6>
-                </span>
-              </li>
-            </Link>
-          </LessonContainer>
+          <li key={key}>
+            <StyledLink
+              activeClassName="active"
+              to={node.path}
+            >
+              {node.chapter}.{node.lessonNumber}&nbsp;&nbsp;{node.title}
+            </StyledLink>
+          </li>
         )
       })
       listItems.push(
@@ -94,6 +92,15 @@ const TableOfContentsContainer = styled.div`
     padding: 0;
     margin: 0;
   }
+
+  ul.chapterItems>li {
+    margin: 2px 0;
+  }
+
+  a.active {
+      color: black;
+      font-weight: 700;
+  }
   
   p, h6 {
     display: inline-block;
@@ -107,22 +114,10 @@ const TableOfContentsContainer = styled.div`
   }
 `
 
-const LessonContainer = styled.div`
-  h6, p {
-    color: black;
-    margin: 0;
-    line-height: 1.5;
-  }
-  li {
-    margin: 0;
-  }
-  &:hover {
-    li {
-      span {
-        border-bottom: 1px solid black;
-      }
-    }
-  }
+const StyledLink = styled(Link)`
+  color: black;
+  font-size: 1.6rem;
+  font-weight: lighter;
 `
 
 export default TableOfContents
