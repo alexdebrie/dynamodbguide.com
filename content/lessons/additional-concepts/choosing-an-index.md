@@ -1,4 +1,5 @@
 ---
+tocTitle: 'Choosing an index type'
 title: "Local or global: Choosing a secondary index type in DynamoDB"
 description: "Compare local secondary indexes and global secondary indexes in DynamoDB, and learn when you should choose one over the other."
 lesson: 1

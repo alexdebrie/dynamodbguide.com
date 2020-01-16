@@ -13,6 +13,7 @@ A group of engineers behind the Amazon Dynamo database published the [Dynamo Pap
 
 The paper was highly influential and inspired a number of NoSQL databases, including Apache Cassandra (originally developed at Facebook) and AWS offerings SimpleDB and DynamoDB. In 2012, Amazon Web Services launched DynamoDB, which was a managed database service modeled after the principles behind Dynamo.
 
+> Want to know more about how DynamoDB scales? Check out this post on [SQL, NoSQL, and Scale: How DynamoDB scales where relational databases don't](https://www.alexdebrie.com/posts/dynamodb-no-bad-queries/).
 
 ## Key aspects of Dynamo
 
