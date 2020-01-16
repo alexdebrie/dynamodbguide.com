@@ -14,7 +14,7 @@ class TableOfContents extends React.Component {
     posts.forEach(post => {
       if (post.node.frontmatter.type === type) {
         const postNode = {
-          title: post.node.frontmatter.title,
+          title: post.node.frontmatter.tocTitle || post.node.frontmatter.title,
           path: post.node.fields.slug,
           lessonNumber: post.node.frontmatter.lesson,
           chapter: post.node.frontmatter.chapter

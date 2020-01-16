@@ -133,6 +133,7 @@ export const pageQuery = graphql`
         edges {
           node {
             frontmatter {
+              tocTitle
               title
               lesson
               chapter

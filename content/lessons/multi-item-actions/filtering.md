@@ -25,6 +25,8 @@ An important note is that any limitations on reads are applied in Step 1, _befor
 
 Filtering and projection expressions _aren't_ a magic bullet - they won't make it easy to quickly query your data in additional ways. However, they can save network transfer time by limiting the number and size of items transferred back to your network. They can also simplify application complexity by pre-filtering your results rather than requiring application-side filtering.
 
+> For more on filter expressions and when to use them, check out this post on [When to use (and when not to use) DynamoDB Filter Expressions](https://www.alexdebrie.com/posts/dynamodb-filter-expressions/).
+
 ## Using Filters
 
 Filter expressions are just like [key expressions](./querying#using-key-expressions) on Queries -- you specify an attribute to operate on and an expression to apply.
