@@ -103,13 +103,13 @@ The final downside to local secondary indexes is more obscure but can really bit
 
 What is an item collection? I'm glad you asked! An item collection is all of the items with the same partition key in your base table and local secondary indexes. For example, in our Movies example from earlier, we would have three item collections: Tom Hanks, Tim Allen, and Natalie Portman.
 
-<img width="754" alt="Item collections with Actors & Movies" src="https://user-images.githubusercontent.com/6509926/72524798-4d014e80-3828-11ea-8881-140eedf11ee0.png">
+<img width="683" alt="Item collections with Actors & Movies" src="https://user-images.githubusercontent.com/6509926/72524797-4d014e80-3828-11ea-92ea-0195e8a01c0c.png">
 
 In a single actor's partition, you would need to add up the total size of the items to get the size of the item collection. When you're using a local secondary index, the item collection includes the size of all items with that partition key in the local secondary index as well. If you're projecting the full item into your index, this would double the size of your item collection.
 
 This won't be a problem for most applications if you have a partition key with high cardinality to distribute values across your key space. But what if you had an actor that's been in a lot of movies?
 
-<img width="683" alt="Actors & Movies with Samuel L. Jackson" src="https://user-images.githubusercontent.com/6509926/72524797-4d014e80-3828-11ea-92ea-0195e8a01c0c.png">
+<img width="754" alt="Actors & Movies with Samuel L. Jackson" src="https://user-images.githubusercontent.com/6509926/72524798-4d014e80-3828-11ea-8881-140eedf11ee0.png">
 
 Samuel L. Jackson has been in _a lot_ of movies. Now you might hit the item collection limit. This would block reads on your base table if you would exceed the 10GB limit, which would be a frightening surprise.
 
