@@ -19,7 +19,7 @@ class About extends Component {
           <b>Who:</b> I'm <a href="https://twitter.com/alexbdebrie">Alex DeBrie</a>. I'm an <a href="https://aws.amazon.com/developer/community/heroes/alex-debrie/">AWS Data Hero</a> with a focus on DynamoDB. I blog on various tech topics, mostly related to AWS, at <a href="https://alexdebrie.com">alexdebrie.com</a>.
         </p>
         <p>
-          I work at <a href="https://www.serverless.com">Serverless, Inc.</a>, creators of the <a href="https://github.com/serverless/serverless">Serverless Framework</a>. ⚡️
+          Currently, I provide cloud-native training and consulting for companies with a focus on DynamoDB and serverless. Previously, I worked at <a href="https://www.serverless.com">Serverless, Inc.</a>, creators of the <a href="https://github.com/serverless/serverless">Serverless Framework</a>. ⚡️
           Before that, I was an Infrastructure Engineer & Data Engineer at a sports video startup, and I had a brief stint as a corporate lawyer.
         </p>
         <p>
