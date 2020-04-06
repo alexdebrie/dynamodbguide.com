@@ -36,7 +36,7 @@ In addition to comparators, you can also use certain functions in your expressio
 For example, you could use the `attribute_not_exists()` function as follows to ensure you're not manipulating an Order that already has a DateShipped attribute:
 
 ```
-"attribute_not_exists(DateShipped)
+"attribute_not_exists(DateShipped)"
 ```
 
 The full list of available functions is:
