@@ -166,7 +166,7 @@ You can operate directly on list elements using [expressions](./expression-basic
 **Example Usage:**
 
 ```
-"FamilyMembers": 
+"FamilyMembers": {
     "M": {
         "Bill Murray": {
             "Relationship": "Spouse",
