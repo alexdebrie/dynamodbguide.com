@@ -163,7 +163,7 @@ Our StateCityPostcode RANGE key for the first store is `CA#PASADENA#911033383`. 
 If I wanted to query for _all_ California stores, I would make a [key expression](./querying#using-key-expressions) that looks like this:
 
 ```
-Country = "US" AND AND begins_with(StateCityPostcode, "CA")
+Country = "US" AND begins_with(StateCityPostcode, "CA")
 ```
 
 _Note: This is simplified, as I would actually need to use [expression attribute values](./expression-basics#expression-attribute-values) to represent "US" and "CA"._
@@ -171,13 +171,13 @@ _Note: This is simplified, as I would actually need to use [expression attribute
 What if I want to get even more specific and query all stores _in San Francisco_? Now my key expression looks like:
 
 ```
-Country = "US" AND AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO")
+Country = "US" AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO")
 ```
 
 Finally, I could get all the way to the post code level by using:
 
 ```
-Country = "US" AND AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO#94158")
+Country = "US" AND begins_with(StateCityPostcode, "CA#SAN FRANCISCO#94158")
 ```
 
 You can see this in action by using the [`query_store_locations.py`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/query_store_locations.py) in the example repo.
