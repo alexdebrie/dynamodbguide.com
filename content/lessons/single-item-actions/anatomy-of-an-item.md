@@ -49,7 +49,7 @@ For example, if you want to store a User object with three attributes of Name, A
 {
     "Name": { "S": "Alex DeBrie" },
     "Age": { "N": "29" },
-    "Roles": { "L": ["Admin", "User"] }
+    "Roles": { "L": [{ "S": "Admin" }, { "S": "User" }] }
 }
 ```
 
@@ -69,7 +69,7 @@ For example, if you're using the GetItem API call to retrieve the User from abov
             "N": "29"
         },
         "Roles": {
-            "L": ["Admin", "User"]
+            "L": [{ "S": "Admin" }, { "S": "User" }]
         }
     }
 }
