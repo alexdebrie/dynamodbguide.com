@@ -20,7 +20,9 @@ type: "lesson"
 
 - [Advanced Design Patterns for DynamoDB (reInvent 2017)](https://www.youtube.com/watch?v=jzeKPKpucS0). Rick Houlihan is a master of DynamoDB and has some great tips.
 - [Advanced Design Pattens for DynamoDB (reInvent 2018)](https://www.youtube.com/watch?v=HaEPXoXVf2k). Rick Houlihan is back with more tips. The first half is similar to 2017, but the second half has different examples. Highly recommended. [Get the slides here](https://www.slideshare.net/AmazonWebServices/amazon-dynamodb-deep-dive-advanced-design-patterns-for-dynamodb-dat401-aws-reinvent-2018pdf).
-- [Advanced Design Patterns for DynamoDB (reInvent 2019)](https://t.co/fRtp2X3Vgg?amp=1). The most recent edition of Rick Houlihan's DynamoDB talk. 
+- [Advanced Design Patterns for DynamoDB (reInvent 2019)](https://t.co/fRtp2X3Vgg?amp=1). The most recent edition of Rick Houlihan's DynamoDB talk.
+- Advanced Design Patterns for DynamoDB (reInvent 2020) [Part 1](https://youtu.be/MF9a1UNOAQo) & [Part 2](https://youtu.be/_KNrRdWD25M)
+- Data Modeling with DynamoDB (reInvent 2020) -- [Part 1](https://youtu.be/fiP2e-g-r4g) & [Part 2](https://youtu.be/0uLF1tjI_BI). An intermediate level look at the concepts behind DynamoDB to understand the core data modeling principles.
 - [Data Modeling with DynamoDB (reInvent 2019)](https://www.youtube.com/watch?v=DIQVJqiSUkE). A gentler introduction to DynamoDB single-table concepts. Watch this video if Rick's is too advanced.
 - [Using (and ignoring) DynamoDB Best Practices in Serverless (ServerlessConf NYC 2019)](https://acloud.guru/series/serverlessconf-nyc-2019/view/dynamodb-best-practices). This talk focuses on using DynamoDB in Serverless applications.
 
