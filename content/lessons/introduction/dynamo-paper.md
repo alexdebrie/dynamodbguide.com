@@ -75,5 +75,5 @@ Ready to dig in? [Set up your environment](./environment-setup) then [get starte
 
 - [A Decade of Dynamo](http://www.allthingsdistributed.com/2017/10/a-decade-of-dynamo.html) post on Werner Vogel's blog
 - [Dynamo: Amazon's Highly Available Key-value Store](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
-- [CAP Theorum](https://en.wikipedia.org/wiki/CAP_theorem)
+- [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 - [Amazon Takes Another Pass at NoSQL with DynamoDB](http://readwrite.com/2012/01/18/amazon-enters-the-nosql-market/).
