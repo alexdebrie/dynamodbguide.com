@@ -43,7 +43,7 @@ A second benefit of local secondary indexes is that they reuse the provisioned t
 
 If you're using the [Provisioned pricing mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual) for DynamoDB, you'll provision a certain number of read and write capacity units for your DynamoDB table. This specifies the maximum number of read and write operations per second that your table can handle.
 
-If you're using a global secondary index, you will need to specify additinal read and write capacity units for that index separately from your main table. However, with a local secondary index, you will use the capacity from your base table.
+If you're using a global secondary index, you will need to specify additional read and write capacity units for that index separately from your main table. However, with a local secondary index, you will use the capacity from your base table.
 
 In most situations, this won't save you much money. You'll need to figure the capacity needed for your main table and the capacity needed for your local secondary index. Add them together, and this is the number you'll need for your base table's provisioned throughput.
 
