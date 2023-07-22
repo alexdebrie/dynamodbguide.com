@@ -166,6 +166,6 @@ You can see the response only has 11 items, rather than the full 25:
 }
 ```
 
-Segments are zero-indexed, though I had trouble when trying to use Segment "0" with DynamoDB Local -- it kept returning 0 elements.
+Segments are zero-indexed. Note that [if you are using DynamoDB Local, the Segment and TotalSegments parameters are ignored](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html).
 
 In the next section, we'll learn about [filtering](./filtering) your Query and Scan operations.

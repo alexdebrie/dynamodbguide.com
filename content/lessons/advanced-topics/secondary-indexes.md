@@ -31,7 +31,7 @@ There are a few basics of secondary indexes that are worth knowing:
 
 - **No uniqueness requirement**. Recall that for a table's primary key, _every item is uniquely identified by its primary key_. Thus, you can't have two Items with the same key in a table.
 
-  This requirement is not applicable to secondary indexes. You may have Items in your secondary index with the exact same key structure.
+  This requirement is not applicable to secondary indexes. You may have Items in your secondary index with the exact same key structure. This explains why you can't call GetItem or BatchGetItem on an index: there could be more than one result.
   
 - **Secondary index attributes aren't required.** When writing an Item, you _must_ specify the primary key elements. This isn't true with secondary indexes -- you may write an Item that doesn't include the attributes for secondary indexes. If you do this, the Item won't be written to the secondary index. This is known as a _sparse index_ and can be a very useful pattern.
 
