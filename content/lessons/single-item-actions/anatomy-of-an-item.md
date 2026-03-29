@@ -7,7 +7,7 @@ date: "1/1/2018"
 type: "lesson"
 ---
 
-An _item_ is the core unit of data in DynamoDB. It is comparable to a row in a relational database, a document in MongoDB, or a simple object in a programming language. Each item is _uniquely identifiable_ by a primary key that is set on a table level.
+An _item_ is the core unit of data in DynamoDB. It is comparable to a row in a relational database, a document in MongoDB, or a simple object in a programming language. Each item is _uniquely identifiable_ by a primary key that is set on a table level. Each item cannot exceed 400KB in size.
 
 An item is composed of _attributes_, which are bits of data on the item. This could be the "Name" for a User, or the "Year" for a Car. Attributes have types -- e.g., strings, numbers, lists, sets, etc -- which must be provided when writing and querying Items.
 

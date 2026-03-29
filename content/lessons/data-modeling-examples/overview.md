@@ -14,15 +14,15 @@ This chapter is intended to grow over time. Are there particular use cases you'd
 
 ### Available examples:
 
-- [**Building a global leaderboard using write sharding**](./leaderboard-write-sharding)
+- [**Modeling hierarchical data***](./hierarchical-data)
+
+	This example shows how to model hierarchical data. **It includes a full code sample that uses >25,000 Starbucks store locations.** Learn how to satisfy multiple access patterns, including finding all stores in a particular state, all stores in a particular city, and all stores in a particular zip code.
+
+	- [**Building a global leaderboard using write sharding**](./leaderboard-write-sharding)
 
 	Learn how to organize your DynamoDB to allow for leaderboard-like queries -- "What are the most-viewed items in my table?" "Which users have the top score in my game?"
 	
 	You will also learn how to use write-sharding and scatter-gather queries to alleviate write throttling for high-usage keys.
-	
-- [**Modeling hierarchical data***](./hierarchical-data)
-
-	This example shows how to model hierarchical data. **It includes a full code sample that uses >25,000 Starbucks store locations.** Learn how to satisfy multiple access patterns, including finding all stores in a particular state, all stores in a particular city, and all stores in a particular zip code.
 
 	
 ### Planned examples:

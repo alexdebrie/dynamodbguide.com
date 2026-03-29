@@ -102,7 +102,7 @@ Our first query pattern was to "Retrieve a single store by its Store Number." We
 
 Because our table's primary key is Store Number, we can use the familiar [GetItem](./inserting-retrieving-items#get-item) API call to retrieve a single Item based on its primary key.
 
-Run the [`get_store_location`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/get_store_location.py) script provided in the repo. By default, it will use our default Store Number:
+Run the [`get_store_location`](https://github.com/alexdebrie/dynamodbguide.com/tree/master/examples/starbucks/get_store_location.py) script provided in the repo. By default, it will use our default Store Number: "5860-29255"
 
 It should print out the details for our retrieved Item:
 

@@ -192,7 +192,7 @@ $ aws dynamodb get-item \
 
 Sometimes you may want to retrieve only certain attributes when getting an Item. This can be particularly helpful for saving network bandwidth when working with large items.
 
-Use the `--projection-expression` option to return only particular elements from an item:
+Use the `--projection-expression` option to return only particular attributes from an item:
 
 ```bash
 $ aws dynamodb get-item \

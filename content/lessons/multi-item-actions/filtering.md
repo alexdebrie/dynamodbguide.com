@@ -13,9 +13,9 @@ Filter expressions are used to apply server-side filters on Item attributes _bef
 
 ## Breakdown of a DynamoDB API Call
 
-For the DynamoDB Query and Scan operations, there are three separate steps happening on the DynamoDB server:
+For the DynamoDB Query and Scan operations that have a `Limit` parameter, there are three separate steps happening on the DynamoDB server:
 
-1. **Retrieve** the requested data. This step looks at Starting Token (if provided) for both types of operations, and the Key Expression in a Query operation.
+1. **Retrieve** up to `Limit` items. This step looks at Starting Token (if provided) for both types of operations, and the Key Expression in a Query operation.
 
 2. (Optionally) **Filter** the data retrieved in step 1. This includes applying filters as described in this section or projection expressions as discussed in previous lessons.
 
