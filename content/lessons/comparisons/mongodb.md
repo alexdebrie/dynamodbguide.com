@@ -70,7 +70,7 @@ Operationally, MongoDB uses a more traditional model for databases. You will ins
 
 DynamoDB has a more radical model. Rather than thinking about instances, you only think about usage. You are not responsible for installing software, managing servers, or increasing your cluster size. You only tell AWS how much read and write capacity you want (or skip it altogether by using On-Demand Pricing). As your data usage needs grow, you simply increase the capacity you need.
 
-AWS will completely handle the instances in their DynamoDB fleet, so you don't need to think about instance failure or degredation. You don't need to worry about backups. You don't need to worry about increasing your cluster size.
+AWS will completely handle the instances in their DynamoDB fleet, so you don't need to think about instance failure or degradation. You don't need to worry about backups. You don't need to worry about increasing your cluster size.
 
 There are more 'managed' MongoDB offerings in recent years, such as MongoDB Atlas or AWS DocumentDB (with MongoDB compatibility). These offerings help with the low-level aspects of running a database, but you are still bound to instance-based thinking. Scaling down is near impossible. Scaling up requires increase the size or number of instances and the associated migration. [Rick Houlihan](https://twitter.com/houlihan_rick) has shared stories of MongoDB customers that need to wait _nine months_ to add shards due to all the rebalancing of data that occurs.
 
